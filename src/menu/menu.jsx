@@ -1,11 +1,11 @@
-import { AppBar, IconButton, Tab, Tabs } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import { Link as GatsbyLink } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
-import { Avatar } from '../components/image-fetch/Avatar';
-import { primaryRoute } from '../routes/primary';
-import { useTheme } from '../styles';
+import { AppBar, IconButton, Tab, Tabs } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
+import { Link as GatsbyLink } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
+import { Avatar } from '../components/image-fetch/Avatar'
+import { primaryRoute } from '../routes/primary'
+import { useTheme } from '../styles'
 
 const Sidebar = styled.div`
   height: ${props => (props.theme.screens.lg ? 'fit-content' : '100%')};
@@ -54,86 +54,102 @@ function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
-  };
+  }
 }
 
 const Menu = () => {
-  const { lg, md } = useTheme().screens;
-  const [value, setValue] = React.useState(0);
+  const { lg, md } = useTheme().screens
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <Sidebar>
-      {md ? 
-        <IconButton edge="false" style={{ color: 'white' }} color="inherit" aria-label="menu">
+      {md ? (
+        <IconButton
+          edge="false"
+          style={{ color: 'white' }}
+          color="inherit"
+          aria-label="menu"
+        >
           <MenuIcon />
         </IconButton>
-      :
-      <>
+      ) : (
         <>
-          <DisplayPicture>
-            <Avatar />
-          </DisplayPicture>
-          <PersonalDetails>
-            <h2 style={{ fontWeight: '600', letterSpacing: '1px' }}>
-              Sayan Mondal
-            </h2>
-            <p
-              style={{
-                fontWeight: '100',
-                marginTop: '-10px',
-                letterSpacing: '2px',
-              }}
+          <>
+            <DisplayPicture>
+              <Avatar />
+            </DisplayPicture>
+            <PersonalDetails>
+              <h2 style={{ fontWeight: '600', letterSpacing: '1px' }}>
+                Sayan Mondal
+              </h2>
+              <p
+                style={{
+                  fontWeight: '100',
+                  marginTop: '-5px',
+                  letterSpacing: '2px',
+                }}
+              >
+                Software Developer Engineer
+              </p>
+            </PersonalDetails>
+          </>
+          {lg ? (
+            <AppBar
+              style={{ background: '#272727' }}
+              color="inherit"
+              position="static"
             >
-              Software Developer Engineer
-            </p>
-          </PersonalDetails>
+              <Tabs
+                style={{ color: 'white' }}
+                value={value}
+                onChange={handleChange}
+                textColor="inherit"
+                centered
+              >
+                <Tab label="Home" {...a11yProps(0)} />
+                <Tab label="CV" {...a11yProps(1)} />
+                <Tab label="Blogs" {...a11yProps(2)} />
+                <Tab label="Talks" {...a11yProps(3)} />
+                <Tab label="Get In Touch" {...a11yProps(4)} />
+              </Tabs>
+            </AppBar>
+          ) : (
+            <nav style={{ marginTop: '15%' }}>
+              <ul style={{ listStyle: 'none' }}>
+                <MenuItem to={primaryRoute.home}>
+                  <MenuList>Home</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.cv}>
+                  <MenuList>CV</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.portfolio}>
+                  <MenuList>Portfolio</MenuList>
+                </MenuItem>
+
+                <br></br>
+
+                <MenuItem to={primaryRoute.blog}>
+                  <MenuList>Blogs</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.talks}>
+                  <MenuList>Talks</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.contact}>
+                  <MenuList>Get in Touch</MenuList>
+                </MenuItem>
+              </ul>
+            </nav>
+          )}
         </>
-        {lg ? 
-          <AppBar style={{ background: '#272727' }} color="inherit" position="static">
-            <Tabs style={{ color: 'white' }} value={value} onChange={handleChange} textColor='inherit' centered>
-              <Tab label="Home" {...a11yProps(0)} />
-              <Tab label="CV" {...a11yProps(1)} />
-              <Tab label="Blogs" {...a11yProps(2)} />
-              <Tab label="Talks" {...a11yProps(3)} />
-              <Tab label="Get In Touch" {...a11yProps(4)} />
-            </Tabs>
-          </AppBar>: 
-          <nav style={{ marginTop: '15%' }}>
-            <ul style={{ listStyle: 'none' }}>
-              <MenuItem to={primaryRoute.home}>
-                <MenuList>Home</MenuList>
-              </MenuItem>
-
-              <MenuItem to={primaryRoute.cv}>
-                <MenuList>CV</MenuList>
-              </MenuItem>
-
-              <MenuItem to={primaryRoute.portfolio}>
-                <MenuList>Portfolio</MenuList>
-              </MenuItem>
-
-              <br></br>
-
-              <MenuItem to={primaryRoute.blog}>
-                <MenuList>Blogs</MenuList>
-              </MenuItem>
-
-              <MenuItem to={primaryRoute.talks}>
-                <MenuList>Talks</MenuList>
-              </MenuItem>
-
-              <MenuItem to={primaryRoute.contact}>
-                <MenuList>Get in Touch</MenuList>
-              </MenuItem>
-            </ul>
-          </nav>
-        }
-      </>
-      }
+      )}
     </Sidebar>
   )
 }
