@@ -32,7 +32,7 @@ export default {
     textPrimary: '#042A2B',
     textSecondary: '#5B44BA',
 
-    grayText: opacity =>
+    gray: opacity =>
       opacityCheck(opacity)
         ? `rgba(102, 102, 102, ${opacity})`
         : `rgba(102, 102, 102, 1)`,
