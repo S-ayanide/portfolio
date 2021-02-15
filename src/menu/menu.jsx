@@ -9,7 +9,7 @@ import { useTheme } from '../styles'
 
 const Sidebar = styled.div`
   height: ${props => (props.theme.screens.lg ? 'fit-content' : '100%')};
-  width: ${props => (props.theme.screens.lg ? '100%' : '25%')};
+  width: ${props => (props.theme.screens.lg ? '100%' : '15%')};
   position: fixed;
   z-index: 1;
   top: 0;
@@ -89,8 +89,9 @@ const Menu = () => {
               <p
                 style={{
                   fontWeight: '100',
-                  marginTop: '-5px',
+                  marginTop: '0.5rem',
                   letterSpacing: '2px',
+                  fontSize: '0.8rem'
                 }}
               >
                 Software Developer Engineer

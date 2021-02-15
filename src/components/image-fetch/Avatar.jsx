@@ -27,7 +27,7 @@ const Avatar = () => {
       <Img
         fluid={data.image.childImageSharp.fluid}
         alt="Choas Bird taking feedback"
-        style={{ margin: 'auto' }}
+        style={{ margin: 'auto', borderRadius: '50%' }}
       />
     </Wrapper>
   )

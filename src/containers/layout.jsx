@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from 'styled-components'
 import Menu from '../menu/menu'
 import { theme } from '../styles'
 import Footer from './footer'
-import Header from './header'
 
 const Main = styled.div`
   margin-top: ${props =>
@@ -11,7 +10,7 @@ const Main = styled.div`
   margin-left: ${props =>
     props.theme.screens.lg
       ? '0'
-      : '25%'}; /* Same as the width of the sidenav */
+      : '15%'}; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0;
 `
@@ -21,7 +20,6 @@ const Layout = ({ children, header }) => {
     <ThemeProvider theme={theme()}>
       <Menu />
       <Main>
-        <Header>{header}</Header>
         {children}
         <Footer />
       </Main>
