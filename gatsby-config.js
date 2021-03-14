@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Sayan's Portfolio`,
-    author: '@Sayanide'
+    author: '@Sayanide',
   },
   plugins: [
     `gatsby-plugin-material-ui`,

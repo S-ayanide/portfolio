@@ -9,7 +9,10 @@ const HeadingWrapper = styled.div`
 const Heading = ({ children }) => {
   return (
     <HeadingWrapper>
-      <Typography style={{ fontWeight: 'bold', fontFamily: 'Press Start 2P'}} variant="h4">
+      <Typography
+        style={{ fontWeight: 'bold', fontFamily: 'Press Start 2P' }}
+        variant="h4"
+      >
         {children}
       </Typography>
     </HeadingWrapper>
