@@ -28,17 +28,27 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 90%;
   height: 10rem;
-  object-fit: cover;
+  object-fit: contain;
 `
 
 const VerticalDiv = styled.div`
-  width: 75%;
-  height: 8rem;
+  position: relative;
+  width: 73%;
+  height: 9.5rem;
 `
 
 const Button = styled.button`
+  position: absolute;
   font-size: 1rem;
   width: 25%;
+  bottom: 0;
+  background: #272727;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
 `
 
 const RectangleCard = ({ image, title, description, button }) => {

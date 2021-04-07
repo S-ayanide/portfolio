@@ -23,8 +23,10 @@ const DisplayPicture = styled.div`
   margin-top: ${props => (props.theme.screens.lg ? '2%' : '10%')};
   display: flex;
   justify-content: center;
-  width: ${props => (props.theme.screens.lg ? '10%' : props.theme.screens.xl ? '80%' : '100%')};
-  margin-left: ${props => (props.theme.screens.lg ? '45%' : props.theme.screens.xl ? '10%' : '0')};
+  width: ${props =>
+    props.theme.screens.lg ? '10%' : props.theme.screens.xl ? '80%' : '100%'};
+  margin-left: ${props =>
+    props.theme.screens.lg ? '45%' : props.theme.screens.xl ? '10%' : '0'};
 `
 
 const PersonalDetails = styled.div`
@@ -89,7 +91,8 @@ const Menu = () => {
               <p
                 style={{
                   fontWeight: '100',
-                  marginTop: '0.5rem',
+                  marginTop: '0.7rem',
+                  margin: '0 1rem',
                   letterSpacing: '2px',
                   fontSize: '0.8rem',
                 }}

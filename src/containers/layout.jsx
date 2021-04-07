@@ -15,7 +15,7 @@ const Main = styled.div`
   padding: 0;
 `
 
-const Layout = ({ children, header }) => {
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme()}>
       <Menu />
