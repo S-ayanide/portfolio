@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SectionDark } from '../components/Layout/Sections';
-import Layout from '../containers/layout';
-import { companies } from '../data/data';
-import Books from '../section/Home/Books';
-import Header from '../section/Home/Header';
-import Project from '../section/Home/Project';
-import Skills from '../section/Home/Skills';
+import React from 'react'
+import styled from 'styled-components'
+import { SectionDark } from '../components/Layout/Sections'
+import Layout from '../containers/layout'
+import { companies } from '../data/data'
+import Books from '../section/Home/Books'
+import Header from '../section/Home/Header'
+import Project from '../section/Home/Project'
+import Skills from '../section/Home/Skills'
 
 const H2 = styled.h2`
   text-align: center;
@@ -69,7 +69,7 @@ const Home = () => {
 
       <br />
       {/* Books Currently Reading */}
-      <H2>Books</H2>      
+      <H2>Books</H2>
       <Books />
     </Layout>
   )
