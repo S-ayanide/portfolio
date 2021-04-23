@@ -24,9 +24,9 @@ const DisplayPicture = styled.div`
   display: flex;
   justify-content: center;
   width: ${props =>
-    props.theme.screens.lg ? '10%' : props.theme.screens.xl ? '80%' : '100%'};
+    props.theme.screens.lg ? '10%' : props.theme.screens.xl ? '80%' : props.theme.screens.xxxl ? '80%' : '100%'};
   margin-left: ${props =>
-    props.theme.screens.lg ? '45%' : props.theme.screens.xl ? '10%' : '0'};
+    props.theme.screens.lg ? '45%' : props.theme.screens.xl ? '10%' : props.theme.screens.xxxl ? '10%' : '0'};
 `
 
 const PersonalDetails = styled.div`
