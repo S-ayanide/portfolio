@@ -1,6 +1,6 @@
 module.exports.primaryRoute = {
   home: '/homepage',
-  portfolio: '/portfolio',
+  experience: '/experience',
   resume: '/resume',
   talks: '/talks',
   blog: '/blogs',

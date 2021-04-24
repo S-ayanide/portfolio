@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import SkillCard from '../../../components/Cards/SkillCard'
 
 const Wrapper = styled.div`
-  width: ${props => props.theme.screens.sm ? '100%' : '80%'};
+  width: ${props => (props.theme.screens.sm ? '100%' : '80%')};
   display: grid;
   grid-template-columns: ${props =>
     props.theme.screens.md ? '1fr' : '1fr 1fr'};

@@ -10,7 +10,12 @@ const CardWrapper = styled.div`
   border-radius: 1rem;
   background: #ffffff;
   height: 13rem;
-  width: ${props => (props.theme.screens.sm ? '100%' : props.theme.screens.lg ? '20rem' : '25rem')};
+  width: ${props =>
+    props.theme.screens.sm
+      ? '100%'
+      : props.theme.screens.lg
+      ? '20rem'
+      : '25rem'};
 `
 
 const Header = styled.h2`

@@ -6,7 +6,7 @@ import { useTheme } from '../../../styles'
 
 const CardWrapper = styled.div`
   height: fit-content;
-  width: ${props => props.theme.screens.sm ? '90%' : '96%'};
+  width: ${props => (props.theme.screens.sm ? '90%' : '96%')};
   margin: 1rem 1rem;
   padding: 1rem 0;
   display: flex;
@@ -54,12 +54,11 @@ const Button = styled.button`
 `
 
 const Description = styled.p`
-  font-size: ${props => props.theme.screens.md ? '0.8rem' : '1rem'};
+  font-size: ${props => (props.theme.screens.md ? '0.8rem' : '1rem')};
 `
 
 const RectangleCard = ({ image, title, description, button }) => {
-
-  const {md} = useTheme().screens;  
+  const { md } = useTheme().screens
 
   return (
     <CardWrapper>
