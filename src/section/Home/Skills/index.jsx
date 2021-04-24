@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import SkillCard from '../../../components/Cards/SkillCard'
 
 const Wrapper = styled.div`
-  width: 80%;
+  width: ${props => props.theme.screens.sm ? '100%' : '80%'};
   display: grid;
   grid-template-columns: ${props =>
     props.theme.screens.md ? '1fr' : '1fr 1fr'};
@@ -19,7 +19,7 @@ const Skills = () => (
         'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pofilo.fr%2Fimg%2FSPOF-github%2Fgithub1600.png&f=1&nofb=1',
         'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gartner.com%2Fimagesrv%2Fpeer-insights%2Fvendors%2Flogos%2Fasana.png&f=1&nofb=1',
       ]}
-      name={['Jira', 'Trello', 'GitHub', 'Asana']}      
+      name={['Jira', 'Trello', 'GitHub', 'Asana']}
       anchorImage={
         'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcubelogic.com%2Fwp-content%2Fuploads%2F2018%2F11%2FBusiness-Process-Management.png&f=1&nofb=1'
       }

@@ -1,7 +1,7 @@
-import Tooltip from '@material-ui/core/Tooltip';
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
+import Tooltip from '@material-ui/core/Tooltip'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 
 const CardWrapper = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ const CardWrapper = styled.div`
   border-radius: 1rem;
   background: #ffffff;
   height: 13rem;
-  width: ${props => (props.theme.screens.lg ? '20rem' : '25rem')};
+  width: ${props => (props.theme.screens.sm ? '100%' : props.theme.screens.lg ? '20rem' : '25rem')};
 `
 
 const Header = styled.h2`
@@ -36,10 +36,10 @@ const Image = styled.img`
   width: 3rem;
   height: 3rem;
   margin: 0 0.4rem;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 
   :hover {
-      transform: scale(1.5)
+    transform: scale(1.5);
   }
 `
 
@@ -60,7 +60,9 @@ const SkillCard = ({ heading, skillImage, name, anchorImage }) => (
     <Header>{heading}</Header>
     <SkillWrapper>
       {skillImage.map((skill, i) => (
-        <Tooltip title={name[i]}><Image src={skill} alt={name[i]} /></Tooltip>
+        <Tooltip title={name[i]}>
+          <Image src={skill} alt={name[i]} />
+        </Tooltip>
       ))}
     </SkillWrapper>
     <Anchor src={anchorImage} alt="anchor" />

@@ -2,10 +2,11 @@ import { Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+import { useTheme } from '../../../styles'
 
 const CardWrapper = styled.div`
   height: fit-content;
-  width: 96%;
+  width: ${props => props.theme.screens.sm ? '90%' : '96%'};
   margin: 1rem 1rem;
   padding: 1rem 0;
   display: flex;
@@ -52,7 +53,14 @@ const Button = styled.button`
   padding: 0.5rem;
 `
 
+const Description = styled.p`
+  font-size: ${props => props.theme.screens.md ? '0.8rem' : '1rem'};
+`
+
 const RectangleCard = ({ image, title, description, button }) => {
+
+  const {md} = useTheme().screens;  
+
   return (
     <CardWrapper>
       {image ? (
@@ -67,9 +75,9 @@ const RectangleCard = ({ image, title, description, button }) => {
           {title}
         </Typography>
         <div style={{ margin: '1rem 0' }} />
-        <Typography>{description}</Typography>
+        <Description>{description}</Description>
         <div style={{ margin: '1rem 0' }} />
-        <Button>{button}</Button>
+        {md ? <></> : <Button>{button}</Button>}
       </VerticalDiv>
     </CardWrapper>
   )

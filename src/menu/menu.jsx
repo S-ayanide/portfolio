@@ -140,8 +140,8 @@ const Menu = () => {
                   <MenuList>Home</MenuList>
                 </MenuItem>
 
-                <MenuItem to={primaryRoute.cv}>
-                  <MenuList>CV</MenuList>
+                <MenuItem to={primaryRoute.resume}>
+                  <MenuList>Resume</MenuList>
                 </MenuItem>
 
                 <MenuItem to={primaryRoute.portfolio}>
