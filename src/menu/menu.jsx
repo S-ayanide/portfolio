@@ -115,37 +115,25 @@ const Menu = () => {
           </>
           {lg ? (
             <>
-            <AppBar
-              style={{ background: '#272727' }}
-              color="inherit"
-              position="static"
-            >
-              <Tabs>
-                <Tab to={primaryRoute.home}>
-                  Home
-                </Tab>
+              <AppBar
+                style={{ background: '#272727' }}
+                color="inherit"
+                position="static"
+              >
+                <Tabs>
+                  <Tab to={primaryRoute.home}>Home</Tab>
 
-                <Tab to={primaryRoute.resume}>
-                  Resume
-                </Tab>
+                  <Tab to={primaryRoute.resume}>Resume</Tab>
 
-                <Tab to={primaryRoute.experience}>
-                  Experience
-                </Tab>
+                  <Tab to={primaryRoute.experience}>Experience</Tab>
 
-                <Tab to={primaryRoute.blog}>
-                  Blogs
-                </Tab>
+                  <Tab to={primaryRoute.blog}>Blogs</Tab>
 
-                <Tab to={primaryRoute.talks}>
-                  Talks
-                </Tab>
+                  <Tab to={primaryRoute.talks}>Talks</Tab>
 
-                <Tab to={primaryRoute.contact}>
-                  Get In Touch
-                </Tab>
-              </Tabs>
-            </AppBar>
+                  <Tab to={primaryRoute.contact}>Get In Touch</Tab>
+                </Tabs>
+              </AppBar>
             </>
           ) : (
             <nav style={{ marginTop: '15%' }}>
