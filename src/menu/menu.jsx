@@ -1,4 +1,4 @@
-import { AppBar, IconButton, Tab, Tabs } from '@material-ui/core'
+import { AppBar, IconButton } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
@@ -64,20 +64,20 @@ const MenuList = styled.li`
   }
 `
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  }
-}
+const Tabs = styled.div`
+  color: white;
+  display: flex;
+  margin: 0 auto;
+`
+
+const Tab = styled(GatsbyLink)`
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+`
 
 const Menu = () => {
   const { lg, md } = useTheme().screens
-  const [value, setValue] = React.useState(0)
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
 
   return (
     <Sidebar>
@@ -114,25 +114,27 @@ const Menu = () => {
             </PersonalDetails>
           </>
           {lg ? (
-            <AppBar
-              style={{ background: '#272727' }}
-              color="inherit"
-              position="static"
-            >
-              <Tabs
-                style={{ color: 'white' }}
-                value={value}
-                onChange={handleChange}
-                textColor="inherit"
-                centered
+            <>
+              <AppBar
+                style={{ background: '#272727' }}
+                color="inherit"
+                position="static"
               >
-                <Tab label="Home" {...a11yProps(0)} />
-                <Tab label="CV" {...a11yProps(1)} />
-                <Tab label="Blogs" {...a11yProps(2)} />
-                <Tab label="Talks" {...a11yProps(3)} />
-                <Tab label="Get In Touch" {...a11yProps(4)} />
-              </Tabs>
-            </AppBar>
+                <Tabs>
+                  <Tab to={primaryRoute.home}>Home</Tab>
+
+                  <Tab to={primaryRoute.resume}>Resume</Tab>
+
+                  <Tab to={primaryRoute.experience}>Experience</Tab>
+
+                  <Tab to={primaryRoute.blog}>Blogs</Tab>
+
+                  <Tab to={primaryRoute.talks}>Talks</Tab>
+
+                  <Tab to={primaryRoute.contact}>Get In Touch</Tab>
+                </Tabs>
+              </AppBar>
+            </>
           ) : (
             <nav style={{ marginTop: '15%' }}>
               <ul style={{ listStyle: 'none' }}>
@@ -140,12 +142,12 @@ const Menu = () => {
                   <MenuList>Home</MenuList>
                 </MenuItem>
 
-                <MenuItem to={primaryRoute.cv}>
-                  <MenuList>CV</MenuList>
+                <MenuItem to={primaryRoute.resume}>
+                  <MenuList>Resume</MenuList>
                 </MenuItem>
 
-                <MenuItem to={primaryRoute.portfolio}>
-                  <MenuList>Portfolio</MenuList>
+                <MenuItem to={primaryRoute.experience}>
+                  <MenuList>Experience</MenuList>
                 </MenuItem>
 
                 <br></br>
