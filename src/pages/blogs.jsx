@@ -23,26 +23,24 @@ const SearchWrapper = styled.div`
 `
 
 const Blogs = () => {
-
-  const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState(null)
 
   // Filter the blogs based on search results
   const filteredBlogs = blogs.filter(blog => {
-    if (search === null) return blog;
-    if (blog.title.toLowerCase().includes(search.toLowerCase()))
-      return blog;
-    return null;
-  });
+    if (search === null) return blog
+    if (blog.title.toLowerCase().includes(search.toLowerCase())) return blog
+    return null
+  })
 
   return (
     <Layout>
       <SearchWrapper>
-      <Search
+        <Search
           placeholder={'Enter title to search'}
           value={search}
-          onChange={(event) => setSearch(event.target.value)}
+          onChange={event => setSearch(event.target.value)}
         />
-        </SearchWrapper>
+      </SearchWrapper>
       <Grid>
         {filteredBlogs.map(blog => (
           <SquareCard

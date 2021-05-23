@@ -1,15 +1,11 @@
-import { FormControl, Input, InputAdornment } from "@material-ui/core";
-import { Search as SearchIcon } from "@material-ui/icons";
-import React from "react";
-import { useStyles } from "./styles";
+import { FormControl, Input, InputAdornment } from '@material-ui/core'
+import { Search as SearchIcon } from '@material-ui/icons'
+import React from 'react'
+import { useStyles } from './styles'
 
-const Search = ({
-  placeholder,
-  onChange,
-  className,
-}) => {
+const Search = ({ placeholder, onChange, className }) => {
   // Styles
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <FormControl data-testid="search">
@@ -26,7 +22,7 @@ const Search = ({
         }
       />
     </FormControl>
-  );
-};
+  )
+}
 
-export { Search };
+export { Search }
