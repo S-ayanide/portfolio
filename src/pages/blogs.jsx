@@ -48,6 +48,7 @@ const Blogs = () => {
             description={blog.description}
             coverImage={blog.cover_image}
             url={blog.url}
+            separateWindow={true}
           />
         ))}
       </Grid>

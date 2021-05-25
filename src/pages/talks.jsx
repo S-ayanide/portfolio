@@ -1,10 +1,11 @@
 import { Typography } from '@material-ui/core'
+import localforage from 'localforage'
 import React from 'react'
 import styled from 'styled-components'
 import SquareCard from '../components/Cards/SquareCard'
 import { SectionDark } from '../components/Layout/Sections'
-import {talks} from '../data/data';
 import Layout from '../containers/layout'
+import { talks } from '../data/data'
 
 const Header = styled.div`
   display: flex;
@@ -42,7 +43,11 @@ const Title = styled.div`
   padding: 1rem 2rem;
 `
 
-const Talks = () => {
+const Talks = () => {  
+
+  const handleClick = (index) => {
+    localforage.setItem('talk', index);    
+  }
   return (
     <Layout>
       <Header>
@@ -75,18 +80,19 @@ const Talks = () => {
       </Title>
       <SectionDark>
         <Grid>
-          {talks.map(talk => (
-            <SquareCard
-            title={talk.title}
-            description={talk.date}
-            coverImage={talk.image}
-            url={
-              'https://events.google.com/io/session/49bf2d18-0ff4-4c4f-8753-4db3a8675f3e?lng=en'
-            }
-          />
+          {talks.map((talk,i) => (
+            <span onClick={() => handleClick(i)}>
+              <SquareCard
+                title={talk.title}
+                description={talk.date}
+                coverImage={talk.image}
+                url={'details'}
+                separateWindow={false}              
+              />
+              </span>
           ))}
         </Grid>
-      </SectionDark>
+      </SectionDark>      
     </Layout>
   )
 }

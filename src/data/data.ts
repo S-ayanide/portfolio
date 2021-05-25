@@ -41,39 +41,10 @@ const companies = {
 
 const talks = [
   {
-    "title": "Docker/Kubernetes Penang Meetup",
+    "title": "Docker Penang Meetup",    
     "date": "29 Oct, 2020",
     "organizer": "Docker Penang",
-    "description": `Recently Docker announced a simplified developer experience to deploy and manage containers on Azure & AWS using Docker Desktop. During this meetup we will show you the new features integrated with Docker Desktop & Amazon ECS, how a developer can simply switch contexts to run their applications on Amazon ECS leveraging the Docker commands they are used to. If you want to give it a try during the session make sure you have the latest Docker Desktop and an AWS account.
-
-Agenda:
-
-Overview (Containers & Amazon ECS)
-Features of Amazon ECS
-Docker Desktop integration with ECS
-DEMO
-
-This event being a joint meetup with Kubernetes Penang we will have a session about "Chaos Engineering " by Prithvi Raj & Sayan Mondal.
-
-Notes:
-
-- This is a free event.
-
-Agenda
-
----
-
-Speaker
-
-Sujay Pillai - Jabil Circuit Inc (Cloud Engineer)
-
-Hosted By
-
-Sujay Pillai, Community Leader
-
----
-
-https://events.docker.com/events/details/docker-penang-presents-from-docker-straight-to-aws/`, 
+    "description": `Recently Docker announced a simplified developer experience to deploy and manage containers on Azure & AWS using Docker Desktop. During this meetup we will show you the new features integrated with Docker Desktop & Amazon ECS, how a developer can simply switch contexts to run their applications on Amazon ECS leveraging the Docker commands they are used to. If you want to give it a try during the session make sure you have the latest Docker Desktop and an AWS account.`, 
     "image": "https://secure.meetupstatic.com/photos/event/5/0/0/6/highres_496460486.jpeg",
     "url": "https://www.youtube.com/embed/bXwhXpw74No"
   },
@@ -98,7 +69,7 @@ Deploying our first Chaos Experiment with Litmus`,
     "url": "https://www.youtube.com/embed/Le5ZrC-eNH0"
   },
   {
-    "title": "Automating Chaos with LitmusChaos to ensure Kubernetes Application Resiliency",
+    "title": "Automating Chaos with LitmusChaos to ensure Kubernetes Application Resiliency",    
     "date": "29 Apr, 2021",
     "organizer": "KCD Africa",
     "description": `As resilience use-cases proliferate, Chaos Engineering has become a compelling practice for enhancing your application resilience in production. If you’ve ever gone through the pain and anxiety of responding to an unexpected failure in your production system, then Chaos Engineering is the right fit for you.
