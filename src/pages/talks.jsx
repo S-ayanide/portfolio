@@ -43,10 +43,9 @@ const Title = styled.div`
   padding: 1rem 2rem;
 `
 
-const Talks = () => {  
-
-  const handleClick = (index) => {
-    localforage.setItem('talk', index);    
+const Talks = () => {
+  const handleClick = index => {
+    localforage.setItem('talk', index)
   }
   return (
     <Layout>
@@ -80,19 +79,19 @@ const Talks = () => {
       </Title>
       <SectionDark>
         <Grid>
-          {talks.map((talk,i) => (
+          {talks.map((talk, i) => (
             <span onClick={() => handleClick(i)}>
               <SquareCard
                 title={talk.title}
                 description={talk.date}
                 coverImage={talk.image}
                 url={'details'}
-                separateWindow={false}              
+                separateWindow={false}
               />
-              </span>
+            </span>
           ))}
         </Grid>
-      </SectionDark>      
+      </SectionDark>
     </Layout>
   )
 }

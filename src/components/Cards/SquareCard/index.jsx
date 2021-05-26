@@ -35,8 +35,20 @@ const Description = styled.p`
   font-size: 0.8rem;
 `
 
-const SquareCard = ({ title, description, coverImage, url, separateWindow }) => (
-  <CardWrapper onClick={() => separateWindow ? window.open(url) : window.location.assign(window.location.href + '/' + url)}>
+const SquareCard = ({
+  title,
+  description,
+  coverImage,
+  url,
+  separateWindow,
+}) => (
+  <CardWrapper
+    onClick={() =>
+      separateWindow
+        ? window.open(url)
+        : window.location.assign(window.location.href + '/' + url)
+    }
+  >
     <CoverImage>
       <img src={coverImage} alt={'Cover Image'} />
     </CoverImage>

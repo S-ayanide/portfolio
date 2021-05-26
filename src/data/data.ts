@@ -44,6 +44,20 @@ const talks = [
     "title": "Docker Penang Meetup",    
     "date": "29 Oct, 2020",
     "organizer": "Docker Penang",
+    "speakers": [{
+        "name": "Sujay Pillai",
+        "image": "https://i.ibb.co/jrgKtnd/sujay.jpg",
+        "link": "https://www.docker.com/captains/sujay-pillai"
+      },{
+        "name": "Sayan Mondal",
+        "image": "https://i.ibb.co/RcyckQy/sayan.jpg",
+        "link": "https://www.linkedin.com/in/s-ayanide/"
+      },{
+        "name": "Prithvi Raj",
+        "image": "https://i.ibb.co/LNpBfrq/prithvi.jpg",
+        "link": "https://www.linkedin.com/in/prithvi1307/"
+      }
+    ],
     "description": `Recently Docker announced a simplified developer experience to deploy and manage containers on Azure & AWS using Docker Desktop. During this meetup we will show you the new features integrated with Docker Desktop & Amazon ECS, how a developer can simply switch contexts to run their applications on Amazon ECS leveraging the Docker commands they are used to. If you want to give it a try during the session make sure you have the latest Docker Desktop and an AWS account.`, 
     "image": "https://secure.meetupstatic.com/photos/event/5/0/0/6/highres_496460486.jpeg",
     "url": "https://www.youtube.com/embed/bXwhXpw74No"
@@ -51,6 +65,20 @@ const talks = [
   {
     "title": "Cloud Native Chaos Engineering with Litmus - Cloud Native Computing Bhubaneswar Meetup #2",
     "date": "20 Apr, 2021",
+    "speakers": [{
+        "name": "Sangram Rath",
+        "image": "https://i.ibb.co/w42CFFp/Sangram.jpg",
+        "link": "https://twitter.com/thetechetravelr"
+      },{
+        "name": "Sayan Mondal",
+        "image": "https://i.ibb.co/RcyckQy/sayan.jpg",
+        "link": "https://www.linkedin.com/in/s-ayanide/"
+      },{
+        "name": "Prithvi Raj",
+        "image": "https://i.ibb.co/LNpBfrq/prithvi.jpg",
+        "link": "https://www.linkedin.com/in/prithvi1307/"
+      }
+    ],
     "organizer": "CNCF Bhubaneswar",
     "description": `Chaos Engineering involves testing your distributed systems' resiliency & other capabilities by deliberately injecting failures into it.
 
@@ -71,6 +99,24 @@ Deploying our first Chaos Experiment with Litmus`,
   {
     "title": "Automating Chaos with LitmusChaos to ensure Kubernetes Application Resiliency",    
     "date": "29 Apr, 2021",
+    "speakers": [{
+        "name": "Ihor Dvoretskyi",
+        "image": "https://i.ibb.co/WkJtQy2/Ihor.jpg",
+        "link": "https://twitter.com/idvoretskyi"
+      },{
+        "name": "ABUBAKAR SIDDIQ ANGO",
+        "image": "https://i.ibb.co/6NYL9bM/abubakar-siddiq-ango.jpg",
+        "link": "https://twitter.com/sarki247"
+      },{
+        "name": "Sayan Mondal",
+        "image": "https://i.ibb.co/RcyckQy/sayan.jpg",
+        "link": "https://www.linkedin.com/in/s-ayanide/"
+      },{
+        "name": "Prithvi Raj",
+        "image": "https://i.ibb.co/LNpBfrq/prithvi.jpg",
+        "link": "https://www.linkedin.com/in/prithvi1307/"
+      }
+    ],
     "organizer": "KCD Africa",
     "description": `As resilience use-cases proliferate, Chaos Engineering has become a compelling practice for enhancing your application resilience in production. If you’ve ever gone through the pain and anxiety of responding to an unexpected failure in your production system, then Chaos Engineering is the right fit for you.
 
