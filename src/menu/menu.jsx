@@ -48,6 +48,13 @@ const PersonalDetails = styled.div`
   margin-bottom: 20px;
 `
 
+const MenuBox = styled.div`
+  background: ${props => props.theme.colors.darkGray};
+  height: 20rem;
+  width: 80%;
+  z-index: 9000;
+`
+
 const MenuItem = styled(GatsbyLink)`
   text-decoration: none;
   color: white;
@@ -78,18 +85,52 @@ const Tab = styled(GatsbyLink)`
 
 const Menu = () => {
   const { lg, md } = useTheme().screens
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <Sidebar>
       {md ? (
+        <>
         <IconButton
           edge="false"
           style={{ color: 'white' }}
           color="inherit"
           aria-label="menu"
+          onClick={() => setIsOpen(!isOpen)}
         >
           <MenuIcon />
-        </IconButton>
+        </IconButton>        
+        {isOpen ?
+          <MenuBox>
+            <ul style={{ listStyle: 'none' }}>
+            <MenuItem to={primaryRoute.home}>
+                  <MenuList style={{margin: '1rem 0'}}>Home</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.resume}>
+                  <MenuList style={{margin: '1rem 0'}}>Resume</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.experience}>
+                  <MenuList style={{margin: '1rem 0'}}>Experience</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.blog}>
+                  <MenuList style={{margin: '1rem 0'}}>Blogs</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.talks}>
+                  <MenuList style={{margin: '1rem 0'}}>Talks</MenuList>
+                </MenuItem>
+
+                <MenuItem to={primaryRoute.contact}>
+                  <MenuList style={{margin: '1rem 0'}}>Get in Touch</MenuList>
+                </MenuItem>
+                </ul>
+          </MenuBox>
+          : null
+        }
+        </>
       ) : (
         <>
           <>
@@ -106,15 +147,14 @@ const Menu = () => {
                   marginTop: '0.7rem',
                   margin: '0 1rem',
                   letterSpacing: '2px',
-                  fontSize: '0.8rem',
+                  fontSize: '0.7rem',
                 }}
               >
-                Software Developer Engineer
+                Software Development Engineer
               </p>
             </PersonalDetails>
           </>
-          {lg ? (
-            <>
+          {lg ? (            
               <AppBar
                 style={{ background: '#272727' }}
                 color="inherit"
@@ -133,8 +173,7 @@ const Menu = () => {
 
                   <Tab to={primaryRoute.contact}>Get In Touch</Tab>
                 </Tabs>
-              </AppBar>
-            </>
+              </AppBar>            
           ) : (
             <nav style={{ marginTop: '15%' }}>
               <ul style={{ listStyle: 'none' }}>
