@@ -9,6 +9,10 @@ module.exports = [
     component: path.resolve(`src/pages/resume.jsx`),
   },
   {
+    path: '/experience',
+    component: path.resolve(`src/pages/experience.jsx`),
+  },
+  {
     path: '/talks',
     component: path.resolve(`src/pages/talks.jsx`),
   },

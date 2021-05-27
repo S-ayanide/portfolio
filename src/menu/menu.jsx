@@ -91,45 +91,44 @@ const Menu = () => {
     <Sidebar>
       {md ? (
         <>
-        <IconButton
-          edge="false"
-          style={{ color: 'white' }}
-          color="inherit"
-          aria-label="menu"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <MenuIcon />
-        </IconButton>        
-        {isOpen ?
-          <MenuBox>
-            <ul style={{ listStyle: 'none' }}>
-            <MenuItem to={primaryRoute.home}>
-                  <MenuList style={{margin: '1rem 0'}}>Home</MenuList>
+          <IconButton
+            edge="false"
+            style={{ color: 'white' }}
+            color="inherit"
+            aria-label="menu"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <MenuIcon />
+          </IconButton>
+          {isOpen ? (
+            <MenuBox>
+              <ul style={{ listStyle: 'none' }}>
+                <MenuItem to={primaryRoute.home}>
+                  <MenuList style={{ margin: '1rem 0' }}>Home</MenuList>
                 </MenuItem>
 
                 <MenuItem to={primaryRoute.resume}>
-                  <MenuList style={{margin: '1rem 0'}}>Resume</MenuList>
+                  <MenuList style={{ margin: '1rem 0' }}>Resume</MenuList>
                 </MenuItem>
 
                 <MenuItem to={primaryRoute.experience}>
-                  <MenuList style={{margin: '1rem 0'}}>Experience</MenuList>
+                  <MenuList style={{ margin: '1rem 0' }}>Experience</MenuList>
                 </MenuItem>
 
                 <MenuItem to={primaryRoute.blog}>
-                  <MenuList style={{margin: '1rem 0'}}>Blogs</MenuList>
+                  <MenuList style={{ margin: '1rem 0' }}>Blogs</MenuList>
                 </MenuItem>
 
                 <MenuItem to={primaryRoute.talks}>
-                  <MenuList style={{margin: '1rem 0'}}>Talks</MenuList>
+                  <MenuList style={{ margin: '1rem 0' }}>Talks</MenuList>
                 </MenuItem>
 
                 <MenuItem to={primaryRoute.contact}>
-                  <MenuList style={{margin: '1rem 0'}}>Get in Touch</MenuList>
+                  <MenuList style={{ margin: '1rem 0' }}>Get in Touch</MenuList>
                 </MenuItem>
-                </ul>
-          </MenuBox>
-          : null
-        }
+              </ul>
+            </MenuBox>
+          ) : null}
         </>
       ) : (
         <>
@@ -154,26 +153,26 @@ const Menu = () => {
               </p>
             </PersonalDetails>
           </>
-          {lg ? (            
-              <AppBar
-                style={{ background: '#272727' }}
-                color="inherit"
-                position="static"
-              >
-                <Tabs>
-                  <Tab to={primaryRoute.home}>Home</Tab>
+          {lg ? (
+            <AppBar
+              style={{ background: '#272727' }}
+              color="inherit"
+              position="static"
+            >
+              <Tabs>
+                <Tab to={primaryRoute.home}>Home</Tab>
 
-                  <Tab to={primaryRoute.resume}>Resume</Tab>
+                <Tab to={primaryRoute.resume}>Resume</Tab>
 
-                  <Tab to={primaryRoute.experience}>Experience</Tab>
+                <Tab to={primaryRoute.experience}>Experience</Tab>
 
-                  <Tab to={primaryRoute.blog}>Blogs</Tab>
+                <Tab to={primaryRoute.blog}>Blogs</Tab>
 
-                  <Tab to={primaryRoute.talks}>Talks</Tab>
+                <Tab to={primaryRoute.talks}>Talks</Tab>
 
-                  <Tab to={primaryRoute.contact}>Get In Touch</Tab>
-                </Tabs>
-              </AppBar>            
+                <Tab to={primaryRoute.contact}>Get In Touch</Tab>
+              </Tabs>
+            </AppBar>
           ) : (
             <nav style={{ marginTop: '15%' }}>
               <ul style={{ listStyle: 'none' }}>
