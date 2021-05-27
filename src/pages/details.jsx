@@ -1,17 +1,17 @@
-import { Link as GatsbyLink } from 'gatsby';
-import localforage from 'localforage';
-import React from 'react';
-import styled from 'styled-components';
-import Layout from '../containers/layout';
-import { talks } from '../data/data';
+import { Link as GatsbyLink } from 'gatsby'
+import localforage from 'localforage'
+import React from 'react'
+import styled from 'styled-components'
+import Layout from '../containers/layout'
+import { talks } from '../data/data'
 
 const Wrapper = styled.div`
-  padding: 0 2rem;  
+  padding: 0 2rem;
 `
 
-const Video = styled.div`
-  margin: 0 auto;  
-  padding: 2rem 0;
+const Video = styled.div`  
+  margin: ${props => props.theme.screens.sm ? '3.5rem auto' : '0 auto'};
+  padding: ${props => props.theme.screens.sm ? '1rem 0' : '2rem 0'};
   background: #333652;
   border-radius: 0.5rem;
 `
@@ -66,19 +66,20 @@ const Anchor = styled(GatsbyLink)`
 `
 
 const Details = () => {
-  const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = React.useState(0);
 
   React.useEffect(() => {
     localforage.getItem('talk').then(value => setIndex(value))
   })
+
 
   return (
     <Layout>
       <Wrapper>
         <Video>
           <iframe
-            width="95%"
-            height="500"
+            width='95%'
+            height='500'
             style={{ display: 'block', margin: '0 auto' }}
             src={talks[index].url}
             title={talks[index].title}

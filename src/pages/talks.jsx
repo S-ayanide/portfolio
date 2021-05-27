@@ -15,14 +15,27 @@ const Header = styled.div`
   .content {
     margin: ${props => (props.theme.screens.md ? '0 auto' : 'auto')};
     width: ${props => (props.theme.screens.md ? '85%' : '60%')};
-    padding: ${props => (props.theme.screens.md ? '2rem 3rem' : '5rem 1rem')};
-    font-size: 1.6rem;
+    padding: ${props => (props.theme.screens.md ? '2rem 2rem' : '5rem 1rem')};
+    font-size: ${props => (props.theme.screens.sm ? '1.2rem' : '1.6rem')};
   }
 
   .loudspeaker {
-    width: 20rem;
+    width: ${props => props.theme.screens.sm ? '15rem' : '20rem'};
     margin: ${props => (props.theme.screens.md ? '0 auto' : 'auto')};
   }
+`
+
+const CatchUp = styled.h1`
+  font-size: ${props => props.theme.screens.sm ? '1rem' : '1.5rem'};
+  font-weight: bold;
+  height: 1rem;
+  line-height: ${props => props.theme.screens.sm ? '2rem' : '4rem'};
+`
+
+const Mic = styled.img`
+ width: ${props => props.theme.screens.sm ? '2rem' : '4.5rem'};
+ height: ${props => props.theme.screens.sm ? '2rem' : '4.5rem'};
+ margin-right: ${props => props.theme.screens.sm ? '1rem' : '2rem'};
 `
 
 const Grid = styled.div`
@@ -61,21 +74,13 @@ const Talks = () => {
         />
       </Header>
       <Title>
-        <img
-          style={{ width: '4.5rem', height: '4.5rem', marginRight: '2rem' }}
+        <Mic          
           src="./mic.gif"
           alt="Mic"
         />
-        <Typography
-          style={{
-            fontSize: '1.5rem',
-            fontWeight: 'bold',
-            height: '1rem',
-            lineHeight: '4rem',
-          }}
-        >
+        <CatchUp>
           Catch up on my talks so far
-        </Typography>
+        </CatchUp>
       </Title>
       <SectionDark>
         <Grid>
