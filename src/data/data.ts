@@ -43,18 +43,21 @@ const experience = [
   {
     "role": "Software Engineer",
     "company": "ChaosNative",
+    "logo": "https://i.ibb.co/njXM75h/Chaos-Native-logo-square-black-01.png",
     "date": "May 2021 - Present",
     "details": ['Primarily working on Litmus Chaos open-source to provide tailor-made solutions to SREs']
   },
   {
     "role": "Software Development Engineer Intern",
     "company": "MayaData",
+    "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F35144471%3Fs%3D200%26v%3D4&f=1&nofb=1",
     "date": "Jul 2020 - April 2021",
     "details": ['Worked with React, Redux, LocalForage and TypeScript to build a SaaS platform. Worked closely with the team to host/manage the same on AWS.', 'Optimized testing of component(Cypress & Jest) and automated Unit Test using husky and Makefile. Followed Scrum and frequently had standup to align the team with the roadmap.','Implemented GraphQL schemas and strategies to increase application performance by 80%']
   },
   {
     "role": "FrontEnd Engineering Intern",
     "company": "Alterhop",
+    "logo": "https://scontent.fccu18-1.fna.fbcdn.net/v/t1.6435-9/36087150_394769487688114_7840769485282738176_n.png?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=N1Q8yzbBXwEAX-q731b&_nc_ht=scontent.fccu18-1.fna&oh=154797e80e5435011b9208b4f229dcf2&oe=60D8F93C",
     "date": "May 2020 - June 2020",
     "details": ['Managed data driven documents for various clients, effectively creating visualizations using D3', 'Optimized Rendering speed upto 30%, implemented End-to-End, Unit and Integration Testing resulting in 85% safe development.', 'Involved in Agile software methodologies using Test Driven Development(TDD), Automated testing using MakeFile.']
   },
@@ -64,31 +67,37 @@ const volunteering = [
   {
     "role": "Microsoft Student Partner",
     "company": "Microsoft",
+    "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fborn2invest.com%2Fwp-content%2Fuploads%2F2017%2F05%2Fmicrosoft-80660_960_720-720x600.png&f=1&nofb=1",
     "details": ['Hosted Live Events with prestigious guest speakers from Google, RedHat, etc on topics like Free and Open Source Software, Personal Branding, etc.', 'Educated students about different opportunities with Microsoft and collaborated to teach domain specific Web and Azure Services.']
   },
   {
     "role": "Event Organizer",
-    "company": "Chaos Carnival",    
+    "company": "Chaos Carnival",
+    "logo": "https://i.ibb.co/P45gjws/Chaos-Carnival.jpg",  
     "details": ['Chaos carnival is a global two-day virtual conference for Cloud-Native Chaos Engineering which aims to achieve reliability in systems by breaking things on purpose.', 'I helped organize this event along with an amazing team, my daily role involved me managing the sessions on Airmeet(the hosting platform) along with adding speaker data. Apart from these, I also helped in onboarding the speakers to the conference as well as being one of the MCs by hosting the event.']
   },
   {
     "role": "Community Associate",
-    "company": "Flutter India",    
+    "company": "Flutter India",
+    "logo": "https://i.ibb.co/ctHj8vh/Flutter-India.jpg",  
     "details": ['Working with a community of passionate developers interested in sharing our experiences in building mobile apps using Flutter. Bringing together people to talk about the mobile app development process using Flutter. Interacting with several speakers highly respected in the Flutter Community and solving/discussing specific challenges one faces while developing with Flutter and Dart.']
   },
   {
     "role": "Frontend Web Engineer",
-    "company": "Developer Student Club",    
+    "company": "Developer Student Club",
+    "logo": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdscgt.club%2Fimages%2Fdsc-logo-2.png&f=1&nofb=1", 
     "details": ['Organized local community events in different universities to teach students about Google Technologies.', 'Hosted DevExpo which is the flagship event of DSC in my university.']
   },
   {
     "role": "Technical Volunteer",
-    "company": "Invide",    
+    "company": "Invide",
+    "logo": "https://i.ibb.co/PCPHfcd/Invide.png",
     "details": ['Git Commit Show is the leading online tech conference where senior engineers, researchers, scientists and professors meet while being at home. A 2-day long, online meetup where carefully curated senior developers and researchers share their knowledge and breakthrough projects.']
   },
   {
     "role": "Community Volunteer",
-    "company": "National Service Scheme",    
+    "company": "National Service Scheme",
+    "logo": "https://i.ibb.co/2jSLRSw/NSS.png",
     "details": [`I was a member of NSS SCE (School of Computer Science and Engineering) at KIIT University. I helped drive the 'Swachh Bharat Abhiyan' on our campus by cleaning it in our university. Raised fund for the disastrous Kerela flood in 2018. Visited specially-abled schools along with the NSS team to help the children give a glimpse of hope and happiness.`]
   }
 ]
