@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SubtitleWrapper = styled.p`
-  font-size: 1rem;
+  font-size: ${props => props.theme.screens.md ? '0.8rem' : '1rem'};
   text-align: ${props => props.align ?? 'left'};
 `
 

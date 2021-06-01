@@ -6,36 +6,39 @@ import Layout from '../containers/layout'
 import { experience, volunteering } from '../data/data'
 
 const Wrapper = styled.div`
-  margin: 0 2rem;
+  margin: ${props => props.theme.screens.md ? '5rem 0.5rem' : '0 2rem'};
 `
 
 const FlexAddon = styled.div`
   display: flex;
-  margin: 2rem 2rem;
+  margin: 2rem 2rem;  
 `
 
 const Flex = styled.div`
-  display: flex;  
+  display: flex;
 `
 
 const Logo = styled.img`
-  width: 4rem;
-  height: 4rem;
+  width: ${props => props.theme.screens.md ? '2.5rem' : '4rem'};
+  height: ${props => props.theme.screens.md ? '2.5rem' : '4rem'};
   margin-right: 1rem;
+  cursor: pointer;
 `
 
 const Content = styled.div`
-  width: 80%;
+  width: ${props => props.theme.screens.md ? '95%' : '80%'};
 `
 
 const Date = styled.div`
-  width: 10%;
+  width: ${props => props.theme.screens.md ? '25%' : '10%'};
   margin-top: 0.5rem;
+  margin-right: ${props => props.theme.screens.md ? '0.2rem': ''};
 `
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: ${props => props.theme.screens.md ? '1rem' : '1.6rem'};
+  cursor: pointer;
 `
 
 const Paragraph = styled.p`
@@ -55,12 +58,12 @@ const Experience = () => {
             </Date>
             <Content>
               <Flex>
-                <Logo src={individualExperience.logo} alt="Logo"/>
+                <Logo onClick={() => window.open(individualExperience.link)} src={individualExperience.logo} alt="Logo" />
                 <div>
-                  <Title>{individualExperience.company}</Title>
+                  <Title onClick={() => window.open(individualExperience.link)}>{individualExperience.company}</Title>
                   <Subtitle>{individualExperience.role}</Subtitle>
                 </div>
-              </Flex>              
+              </Flex>
               <hr />
               {individualExperience.details.map(bullet => (
                 <ul>
@@ -78,9 +81,9 @@ const Experience = () => {
           <FlexAddon>
             <Content>
               <Flex>
-                <Logo src={volunteer.logo} alt="Logo" />
+                <Logo onClick={() => window.open(volunteer.link)} src={volunteer.logo} alt="Logo" />
                 <div>
-                  <Title>{volunteer.company}</Title>
+                  <Title onClick={() => window.open(volunteer.link)}>{volunteer.company}</Title>
                   <Subtitle>{volunteer.role}</Subtitle>
                 </div>
               </Flex>
