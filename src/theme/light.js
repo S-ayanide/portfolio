@@ -1,6 +1,27 @@
 export const lightTheme = {
-  background: '#F9FAFB',
-  secondaryBackground: '#E5E7EB',
-  text: '#111827',
+  screens: {
+    // max-widths in pixels
+    xs: 450,
+    sm: 640,
+    md: 768,
+    mmd: 890,
+    lg: 1024,
+    xl: 1280,
+    xxl: 1350,
+    xxxl: 1600,
+    xxxxl: 1800,
+  },
   button: '#374151',
+  backgroundLight: '#F9FAFC',
+  backgroundDark: '#F4F5F7',
+  textPrimary: '#042A2B',
+  textSecondary: '#111827',
+  fontSize: {
+    heading: { lg: '2.2rem', md: '1.75rem' },
+    subHeading: { lg: '1.5rem', md: '1.125rem' },
+    paragraph: { lg: '1rem', md: '0.875rem' },
+    subText: { lg: '1.25rem', md: '1.125rem' },
+    button: '1.125rem',
+    small: { lg: '0.875rem', md: '0.75rem' },
+  },
 }

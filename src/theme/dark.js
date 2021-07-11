@@ -1,6 +1,27 @@
 export const darkTheme = {
-  background: '#111827',
-  secondaryBackground: '#374151',
-  text: '#F9FAFB',
+  screens: {
+    // max-widths in pixels
+    xs: 450,
+    sm: 640,
+    md: 768,
+    mmd: 890,
+    lg: 1024,
+    xl: 1280,
+    xxl: 1350,
+    xxxl: 1600,
+    xxxxl: 1800,
+  },
   button: '#E5E7EB',
+  backgroundLight: '#111827',
+  backgroundDark: '#374151',
+  textPrimary: '#E5E7EB',
+  textSecondary: '#F9FAFB',
+  fontSize: {
+    heading: { lg: '2.2rem', md: '1.75rem' },
+    subHeading: { lg: '1.5rem', md: '1.125rem' },
+    paragraph: { lg: '1rem', md: '0.875rem' },
+    subText: { lg: '1.25rem', md: '1.125rem' },
+    button: '1.125rem',
+    small: { lg: '0.875rem', md: '0.75rem' },
+  },
 }
