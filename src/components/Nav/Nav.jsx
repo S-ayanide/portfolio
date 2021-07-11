@@ -13,7 +13,7 @@ const NavBar = styled.div`
 const Nav = () => {
   return (
     <NavBar>
-      <Width width="80%">
+      <Width width="70%">
         <Flex>
           <p>Sayan Mondal</p>
           <Burger />

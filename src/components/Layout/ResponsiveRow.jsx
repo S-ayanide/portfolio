@@ -1,18 +1,15 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const ResponsiveRow = styled.div`
   width: 100%;
   display: flex;
-  ${props =>
-    props.theme.screens[props.breakpoint]
-      ? css`
-          flex-direction: column;
-          align-items: ${props.alignItems ?? 'center'};
-        `
-      : css`
-          flex-direction: row;
-          justify-content: ${props.justifyContent ?? 'center'};
-        `};
+  flex-direction: 'row';
+  align-items: ${props => props.alignItems ?? 'center'};
+  justify-content: ${props => props.justifyContent ?? 'center'};
+
+  @media (max-width: 768px) {
+    flex-direction: 'column';
+  }
 `
 
-export default ResponsiveRow
+export { ResponsiveRow }

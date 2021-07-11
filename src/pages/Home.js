@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex } from '../components/Layout'
+import {
+  ResponsiveRow,
+  SectionDark,
+  SectionLight,
+  Width,
+  WrappedContainer,
+} from '../components/Layout'
 
 const Body = styled.div`
-  padding: 3em 5em;
+  padding: 3em 0;
 `
 
 const Heading = styled.div`
@@ -15,6 +21,11 @@ const Heading = styled.div`
 const SubPara = styled.p`
   font-size: 1.5em;
   color: ${props => props.theme.textSecondary};
+`
+
+const Avatar = styled.img`
+  width: 35rem;
+  object-fit: cover;
 `
 
 const Para = styled.p`
@@ -30,24 +41,26 @@ const Content = styled.div`
 
 const Home = () => {
   return (
-    <Body>
-      <Heading>Hello</Heading>
-      <SubPara>What's up! Toggle the switch above to change the theme</SubPara>
-      <Content>
-        <Flex center column>
-          <Heading>Article</Heading>
-          <Para>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit quis ipsa, sunt, consectetur voluptate dolores
-            pariatur nisi distinctio iusto vero iure officia. Vero sunt, ducimus
-            sit eveniet dolor impedit itaque voluptate ipsam! Omnis totam,
-            beatae dicta fugit praesentium fugiat dolores laborum, officiis,
-            labore aperiam tempore! Debitis, provident! Rem, exercitationem
-            enim?
-          </Para>
-        </Flex>
-      </Content>
-    </Body>
+    <>
+      <SectionLight>
+        <Body>
+          <WrappedContainer>
+            <ResponsiveRow justifyContent="space-between">
+              <Width width="50%">
+                <Heading>Hello</Heading>
+                <SubPara>
+                  What's up! Toggle the switch above to change the theme
+                </SubPara>
+              </Width>
+              <Width width="50%">
+                <Avatar src="./img/Avatar.png" alt="Avatar" />
+              </Width>
+            </ResponsiveRow>
+          </WrappedContainer>
+        </Body>
+      </SectionLight>
+      <SectionDark>YOOOOO</SectionDark>
+    </>
   )
 }
 

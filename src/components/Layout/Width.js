@@ -5,4 +5,6 @@ const Width = styled.div`
   margin: 0 auto;
 `
 
-export { Width }
+const WrappedContainer = ({ children }) => <Width width="70%">{children}</Width>
+
+export { Width, WrappedContainer }

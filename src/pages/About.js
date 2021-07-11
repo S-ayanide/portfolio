@@ -1,5 +1,7 @@
+import { WrappedContainer } from '../components/Layout'
+
 function About() {
-  return <div>About</div>
+  return <WrappedContainer>About</WrappedContainer>
 }
 
 export default About
