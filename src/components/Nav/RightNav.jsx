@@ -1,6 +1,12 @@
 import React, { useContext, useEffect } from 'react'
+import { NavLink as NLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { GlobalContext } from '../../context/globalContext'
+import route from '../../routes/primary'
+
+const NavLink = styled(NLink)`
+  color: ${props => props.theme.textPrimary};
+`
 
 const Ul = styled.ul`
   list-style: none;
@@ -8,9 +14,18 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   margin: 0;
 
+  .active {
+    color: ${props => props.theme.highlight};
+    font-weight: bold;
+  }
+
   li {
     padding: 18px 10px;
+    :hover {
+      cursor: pointer;
+    }
   }
+
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: #0d2538;
@@ -33,7 +48,7 @@ const SwitchButton = styled.label`
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin: ${props => (props.theme.screens.sm ? '10px 10px' : '10px 20px')};
+  margin: ${props => (props.theme.screens.sm ? '10px 10px' : '10px 30px')};
 
   input {
     opacity: 0;
@@ -91,11 +106,21 @@ const RightNav = ({ open }) => {
 
   return (
     <Ul open={open}>
-      <li>Home</li>
-      <li>About</li>
-      <li>Portfolio</li>
-      <li>Blog</li>
-      <li>Contact</li>
+      <NavLink exact to={route.home} activeClassName="active">
+        <li>Home</li>
+      </NavLink>
+      <NavLink exact to={route.about} activeClassName="active">
+        <li>About</li>
+      </NavLink>
+      <NavLink exact to={route.portfolio} activeClassName="active">
+        <li>Portfolio</li>
+      </NavLink>
+      <NavLink exact to={route.blog} activeClassName="active">
+        <li>Blog</li>
+      </NavLink>
+      <NavLink exact to={route.contact} activeClassName="active">
+        <li>Contact</li>
+      </NavLink>
       <SwitchButton>
         <input
           type="checkbox"

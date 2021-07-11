@@ -14,6 +14,7 @@ export const darkTheme = {
   button: '#E5E7EB',
   backgroundLight: '#111827',
   backgroundDark: '#374151',
+  highlight: '#F9004D',
   textPrimary: '#E5E7EB',
   textSecondary: '#F9FAFB',
   fontSize: {

@@ -14,6 +14,7 @@ export const lightTheme = {
   button: '#374151',
   backgroundLight: '#F9FAFC',
   backgroundDark: '#F4F5F7',
+  highlight: '#F9004D',
   textPrimary: '#042A2B',
   textSecondary: '#111827',
   fontSize: {
