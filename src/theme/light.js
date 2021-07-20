@@ -17,6 +17,7 @@ export const lightTheme = {
   highlight: '#F9004D',
   textPrimary: '#042A2B',
   textSecondary: '#111827',
+  icon: '#042A2B',
   fontSize: {
     heading: { lg: '2.2rem', md: '1.75rem' },
     subHeading: { lg: '1.5rem', md: '1.125rem' },

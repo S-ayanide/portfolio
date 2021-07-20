@@ -16,7 +16,6 @@ const Ul = styled.ul`
 
   .active {
     color: ${props => props.theme.highlight};
-    font-weight: bold;
   }
 
   li {

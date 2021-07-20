@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components'
 
 const Flex = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: ${props => props.justifyContent ?? 'space-between'};
   ${props =>
     props.center &&
     css`

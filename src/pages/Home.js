@@ -1,65 +1,64 @@
 import React from 'react'
 import styled from 'styled-components'
+import { OutlinedButton } from '../components/Buttons'
 import {
+  Flex,
   ResponsiveRow,
-  SectionDark,
-  SectionLight,
   Width,
   WrappedContainer,
 } from '../components/Layout'
-
-const Body = styled.div`
-  padding: 3em 0;
-`
+import { SocialMedia } from '../components/SocialMedia'
 
 const Heading = styled.div`
-  font-size: 5em;
-  font-weight: 800;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
   color: ${props => props.theme.textPrimary};
-`
 
-const SubPara = styled.p`
-  font-size: 1.5em;
-  color: ${props => props.theme.textSecondary};
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    font-weight: 400;
+  }
 `
 
 const Avatar = styled.img`
-  width: 35rem;
+  width: 40rem;
   object-fit: cover;
-`
+  margin-left: -45%;
 
-const Para = styled.p`
-  font-size: 1.2em;
-  line-height: 1.5;
-  color: ${props => props.theme.textSecondary};
-  width: 80%;
-`
-
-const Content = styled.div`
-  padding: 10em 0;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin: 1rem 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
 `
 
 const Home = () => {
   return (
     <>
-      <SectionLight>
-        <Body>
-          <WrappedContainer>
-            <ResponsiveRow justifyContent="space-between">
-              <Width width="50%">
-                <Heading>Hello</Heading>
-                <SubPara>
-                  What's up! Toggle the switch above to change the theme
-                </SubPara>
-              </Width>
-              <Width width="50%">
-                <Avatar src="./img/Avatar.png" alt="Avatar" />
-              </Width>
-            </ResponsiveRow>
-          </WrappedContainer>
-        </Body>
-      </SectionLight>
-      <SectionDark>YOOOOO</SectionDark>
+      <WrappedContainer>
+        <ResponsiveRow justifyContent="space-between">
+          <Width width="50%">
+            <Avatar src="./img/Avatar.png" alt="Avatar" />
+          </Width>
+          <Width width="50%">
+            <Flex column>
+              <Heading>
+                Hello, I'm Sayan Mondal, Seasoned Software Engineer and
+                Technical Evangelist experienced in creating and executing
+                software solutions to enhance business productivity.
+              </Heading>
+              <br />
+              <br />
+              <OutlinedButton width={'13rem'}>Download Resume</OutlinedButton>
+              <br />
+              <SocialMedia width={'13rem'} />
+            </Flex>
+          </Width>
+        </ResponsiveRow>
+      </WrappedContainer>
     </>
   )
 }
