@@ -15,6 +15,7 @@ export const lightTheme = {
   backgroundLight: '#F9FAFC',
   backgroundDark: '#F4F5F7',
   highlight: '#F9004D',
+  ripple: '#B6B6B6',
   textPrimary: '#042A2B',
   textSecondary: '#111827',
   icon: '#042A2B',

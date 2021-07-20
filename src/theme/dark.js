@@ -15,6 +15,7 @@ export const darkTheme = {
   backgroundLight: '#191919',
   backgroundDark: '#101010',
   highlight: '#F9004D',
+  ripple: '#F9004D',
   textPrimary: '#E5E7EB',
   textSecondary: '#F9FAFB',
   icon: '#F9004D',
