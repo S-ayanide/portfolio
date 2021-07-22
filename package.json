@@ -13,7 +13,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "yarn format && react-scripts start",
+    "start": "react-scripts start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "build": "react-scripts build",
     "lint": "eslint .",
