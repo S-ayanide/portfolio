@@ -44,10 +44,7 @@ const Header = () => (
         </Heading>
         <br />
         <br />
-        <a
-          href="https://cdn-102.anonfiles.com/P9n2g88bu1/b739e982-1626966329/Sayan's%20Resume.pdf"
-          download="Sayan's Resume"
-        >
+        <a href="https://cdn-102.anonfiles.com/P9n2g88bu1/d7c1956c-1626970435/Sayan's%20Resume.pdf">
           <OutlinedButton width={'13rem'}>Download Resume</OutlinedButton>
         </a>
         <br />

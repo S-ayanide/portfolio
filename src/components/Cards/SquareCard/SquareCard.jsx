@@ -3,26 +3,32 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CardWrapper = styled.div`
-  width: 100%;
   height: 100%;
-  margin: 0 1rem;
-  background: #f4f5f7;
-  padding: 1rem;
+  background: ${props => props.theme.backgroundDark};
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: ${props => `0px 4px 4px 0px ${props.theme.shadow}`};
+  color: ${props => props.theme.textPrimary};
 
   :hover {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+    box-shadow: ${props =>
+      `6px 2px 16px 0px ${props.theme.hover} , -6px -2px 16px 0px ${props.theme.shadow}`};
     transition: 0.2s ease;
     cursor: pointer;
   }
 `
 
 const CoverImage = styled.div`
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   width: 100%;
-  object-fit: contain;
+
+  img {
+    width: 100%;
+    height: 13rem;
+    border-radius: 0.7rem;
+    object-fit: cover;
+    overflow: hidden;
+  }
 `
 
 const Title = styled.h1`
@@ -64,4 +70,4 @@ SquareCard.propTypes = {
   url: PropTypes.string,
 }
 
-export default SquareCard
+export { SquareCard }

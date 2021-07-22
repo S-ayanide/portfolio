@@ -20,6 +20,15 @@ const Grid = styled.div`
   }
 `
 
+const ExtraSpaceForSM = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-bottom: 2rem;
+  }
+`
+
 const Link = styled.a`
   text-decoration: none;
   margin-right: 1rem;
@@ -53,6 +62,7 @@ const SocialMedia = ({ width }) => (
         </Link>
       ))}
     </Grid>
+    <ExtraSpaceForSM />
   </Width>
 )
 

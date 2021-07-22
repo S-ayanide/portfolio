@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeadingWrapper = styled.div`
-  margin: 0.5rem 2rem;
+  padding: 0.5rem 2rem;
+  color: ${props => props.theme.textPrimary};
 `
 
 const Heading = ({ children }) => {

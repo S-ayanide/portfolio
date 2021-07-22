@@ -19,6 +19,8 @@ export const darkTheme = {
   textPrimary: '#E5E7EB',
   textSecondary: '#F9FAFB',
   icon: '#F9004D',
+  shadow: '#FF457D33',
+  hover: '#FF457D',
   fontSize: {
     heading: { lg: '2.2rem', md: '1.75rem' },
     subHeading: { lg: '1.5rem', md: '1.125rem' },

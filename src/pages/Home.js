@@ -1,10 +1,18 @@
 import React from 'react'
-import { Header } from '../sections/Home'
+import { SectionDark, WrappedContainer } from '../components/Layout'
+import { Blogs, Header } from '../sections/Home'
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <WrappedContainer>
+        <Header />
+      </WrappedContainer>
+      <SectionDark>
+        <WrappedContainer>
+          <Blogs />
+        </WrappedContainer>
+      </SectionDark>
     </>
   )
 }
