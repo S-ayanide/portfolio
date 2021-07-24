@@ -4,15 +4,15 @@ import styled from 'styled-components'
 
 const CardWrapper = styled.div`
   height: 100%;
-  background: ${props => props.theme.backgroundDark};
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  box-shadow: ${props => `0px 4px 4px 0px ${props.theme.shadow}`};
+  box-shadow: ${props =>
+    `0px 4px 6px -1px ${props.theme.shadow} , 0px 2px 4px -1px ${props.theme.shadow} `};
   color: ${props => props.theme.textPrimary};
 
   :hover {
     box-shadow: ${props =>
-      `6px 2px 16px 0px ${props.theme.hover} , -6px -2px 16px 0px ${props.theme.shadow}`};
+      `0px 10px 15px -3px ${props.theme.hover} , 0px 4px 6px -2px ${props.theme.hover} `};
     transition: 0.2s ease;
     cursor: pointer;
   }
