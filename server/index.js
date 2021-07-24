@@ -39,5 +39,5 @@ app.get('/api/blogs/:numberOfBlogs', (req, res) => {
   )
 })
 
-// eslint-disable next-line
+// eslint-disable-next-line
 app.listen(port, () => console.info(`Listening on port ${port}`))
