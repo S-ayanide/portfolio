@@ -39,4 +39,4 @@ app.get('/api/blogs/:numberOfBlogs', (req, res) => {
   )
 })
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(port, () => console.info(`Listening on port ${port}`))
